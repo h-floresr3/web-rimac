@@ -1,0 +1,448 @@
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul, nav{
+    list-style: none;
+}
+body{    
+    font: normal 16px "Lato", Arial, sans-serif;
+    color:#555;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    cursor:cursor;
+    opacity: 0.6;
+}
+a:hover{
+    opacity: 1;
+}
+hr{
+    width:150px;
+    height: 2px;
+    background-color: #2196F3;
+    border: 0;
+    margin: 40px auto;
+}
+section{
+    background-color: #fff;
+    padding: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;    
+    color: #141938;
+    font-family: "Lato", Arial, sans-serif;
+}
+section h3{
+    color: #141938;
+    text-transform: capitalize;
+    font: 32px;
+    font-weight: 900;
+    font-family: "Lato", Arial, sans-serif;
+    margin-bottom: 35px;
+}
+
+img {
+    background-color: #fff;
+}
+
+@media(max-width: 1000px){
+    section{
+        padding:100px 50px;
+    }
+}
+
+@media(max-width: 700px){
+    section{
+        padding:50px 30px;
+    }
+}
+
+ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*--------------
+HEADER
+---------------*/
+header{
+    background-color: #ff6e00;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+    color: white;
+    /*padding: 35px 100px 20px;*/
+    display:flex;
+    justify-content: space-around;
+    font: normal 25px "Lato", Arial, sans-serif;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav li{
+    margin: 0 15px;
+}
+
+header nav li:first-child{
+    margin-left: 0;
+}
+
+header nav li:last-child{
+    margin-right: 0;
+}
+
+header a{
+    opacity: 1;
+}
+header a:hover{
+    font-weight: bold;
+}
+#menu2 {
+    display: none;
+}
+#imagen2{
+    display: none;
+}
+#menu1 {
+    display: block;
+}
+#imagen1{
+    display: block;
+}
+@media(max-width: 1000px){
+    header{
+        padding: 0px 50px;
+    }
+}
+
+@media(max-width: 700px){
+    header{
+        font-size: 100%;
+        flex-direction: column;
+        font: normal 25px "Lato", Arial, sans-serif;
+        padding: 0px 0px;
+    }
+    header nav li{
+        margin: 0 px;
+    }
+    header nav li{
+        margin: 0 0px;
+    }
+    
+    header h2{
+        margin-bottom: 100px;
+    }
+    header nav ul{
+        display: flex;
+    }
+    #menu2{
+        display: block;
+    }
+    #imagen2{
+        display: block;
+    }
+    #imagen1 {
+        display: none;
+    }
+    #menu1 {
+        display: none;
+    }
+    .nav > li {
+        float:left;
+    }
+    
+    nav li a {
+        background-color:#ff6e00;
+        color:#fff;
+        text-decoration:none;
+        padding:10px 12px;
+        display:block;
+        width: 255px;
+        height: 45px;
+        display:inline-block;
+    }
+    nav li img {
+        position: fixed;
+    }
+       
+   
+    nav li ul {
+        display:none;
+        position:absolute;
+        min-width:140px;
+    }
+    
+    nav li:hover > ul {
+        display:block;
+    }
+    
+    nav li ul li {
+        position:relative;
+    }
+    
+    nav li ul li ul {
+        right:-140px;
+        top:0px;
+    }
+}
+
+.smallerheadline{
+    font-size:  75%;
+}
+.round{
+    border: 6px solid #EDEFFC;
+    border-radius: 50%;
+}
+/*--------------
+INCIO
+---------------*/
+.inicio{
+    background-color: transparent;
+    position:relative;
+    justify-content: center;
+    min-height: 100vh;
+    color:#fff;
+    text-align: center;
+}
+
+.inicio .background-image{
+    background: url('images/inicio.png');
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-color: #ef3340;
+}
+
+.inicio .background-image:after{
+    content: '';
+    position:fixed;
+    top:0;
+    left: 0;
+     width: 100%;
+    height: 100%;
+    background-color: #414A4F;
+    opacity: 0.75;
+}
+
+.inicio h1{
+    /*font: bold 60px 'Henny Penny', serif;*/
+    font: bold 60px "Lato", Arial, sans-serif;
+    font-size: 90px;
+    text-shadow: 3px 3px #000;
+    margin-bottom: 15px;
+}
+
+.inicio h3{
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+    color:aliceblue;
+}
+
+@media(max-width: 800px){
+    .inicio{
+        min-height: 600px;
+    }
+    .inicio h1{
+        font-size: 48px;
+    }
+    .inicio h3{
+        font-size: 24px;
+    }
+    .inicio .background-image{    
+        background: url('images/inicio.png') center no-repeat;
+    }
+    
+}
+/*--------------
+PRODUCTOS
+---------------*/
+.productos{
+    background-color: #EDEFFC;
+}
+
+.productos .grid li{
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.productos .grid li h4 {
+    /*color: #2196F3;*/
+    color: #101249;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+.productos .grid li p {
+    margin: 0;
+}
+
+@media (max-width: 1000px){
+    .productos .grid li{
+        flex-basis: 100%;
+        margin-bottom: 65px;
+    }
+    
+    .seguros .grid li:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 700px){
+    .seguros .grid li{
+        flex-basis: 100%;
+    }
+}
+button{
+    background-color: #ff9340; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+button:hover{
+    background-color: #BF6E30; /* Green */
+}
+
+/*--------------
+PROMOCIONES
+---------------*/
+.servicios{
+    background-color: #FFB073;
+    color: #fff;
+}
+
+.servicios h3{
+    color: #fff;
+}
+
+.servicios .grid li{
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    
+    background-clip: content-box;
+    background-size:cover;
+    background-position: center;
+    background-color: #333;
+    color: #101249;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.servicios .grid li.small{
+    flex-basis: 40%;
+}
+
+.servicios .grid li.large{
+    flex-basis: 60%;
+}
+
+.servicio-01{
+    background-image: url(/images/servicios-puertas.png);
+}
+.servicio-02{
+    background-image: url(images/servicios-despacho.png);
+}
+.servicio-03{
+    background-image: url(images/servicios-organizacion.png);
+}
+.servicio-04{
+    background-image: url(images/servicios-pintura.png);
+}
+
+@media (max-width: 1000px){
+    .promociones .grid li.small, .promociones .grid li.large{
+      flex-basis: 100%;  
+    }  
+
+}
+
+/*--------------
+FOOTER
+---------------*/
+
+footer{
+    display:flex;
+    flex-direction: column;
+    background-color: #A64800;
+    color: #a9b1d1;
+    padding: 20px 0;
+    text-align: center;
+    align-items: center;
+}
+
+footer ul{
+    display:flex;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+footer ul li{
+    margin: 0 8px;
+}
+
+footer ul li:first-child{
+    margin-left: 0;
+}
+
+footer ul li:last-child{
+    margin-right: 0;
+}
+
+footer p{
+    font-size: 14px;
+    color: #a9b1d1;
+    margin-bottom: 10px;
+}
+
+footer p a{
+    color: #fff;
+}
+
+footer .copy-right{
+    display: flex;
+}
+
+footer .copy-right-text{
+    padding-top: 3px;
+}
+
+footer .logo{
+    margin-right: 20px;
+}
+
+@media (max-width: 700px){
+    footer{
+        padding: 80px 15px;
+    }
+}
